@@ -1,0 +1,36 @@
+/* SHIFT */
+
+
+
+nav.navbar div div.collapse ul li a {
+  position:relative;
+  z-index: 1;
+}
+nav.navbar div div.collapse ul li a:hover {
+  color: #ffffff;      /* For text */
+  opacity: 0.9;
+}
+nav.navbar div div.collapse ul li a:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: '.';
+  color: transparent;
+  background: #afc4c9;          /* For whole block of one */
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+  transition-duration: 0.5s;
+}
+nav.navbar div div.collapse ul li a:hover:after {
+  opacity: 0.4;
+  visibility: visible;
+  height: 100%;
+
+}
